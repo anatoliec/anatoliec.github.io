@@ -1,7 +1,147 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lora', sans-serif;
+            color: white;
+            background: #202731;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 5px;
+            padding: 100px 25vw;
+        }
+
+        .mandarian_orange {
+            background: #931C1C;
+        }
+
+        .safety_orange {
+            background: #F5730A
+        }
+
+        .spacer {
+            aspect-ratio: 960/540;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .layer1 {
+            background-image: url('./gfx/layer1.svg')
+        }
+
+        .layer2 {
+            background-image: url('./gfx/layer2.svg')
+        }
+
+        .blob-motion {
+            position: absolute;
+            transform: translateY(20%);
+            opacity: 18%;
+        }
+
+    </style>
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<section class="mandarian_orange">
+    <h1>A Header</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aliquam cum deleniti dolorem doloremque ducimus et,
+        fugiat illo laboriosam minus molestiae nam nihil officiis perferendis repudiandae sint. Fugit, ipsum.</p>
+
+    <svg class="blob-motion"
+         id="visual"
+         viewBox="0 0 900 600"
+         width="900"
+         height="600"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="1.1">
+        <g transform="translate(440.5129238047903 315.6704223139288)">
+            <path id="orangeblob1"
+                  d="M172.2 -149.7C209 -91.3 214.6 -20.5 196.8 39.8C179 100.2 137.7 150.1 81.5 182.1C25.3 214.1 -45.7 228.2 -97.5 203.1C-149.3 177.9 -181.9 113.4 -186.9 53.5C-191.9 -6.3 -169.2 -61.6 -133.5 -119.8C-97.7 -177.9 -48.9 -239 9.4 -246.5C67.8 -254 135.5 -208.1 172.2 -149.7"
+                  fill="#F5730A"></path>
+        </g>
+        <g transform="translate(460.10566134113196 321.86218425783284)" style="visibility: hidden">
+            <path id="orangeblob2"
+                  d="M157.2 -127.2C202.9 -68.1 238.4 -2.8 229.4 58.6C220.4 120.1 166.8 177.6 107.6 195.3C48.4 213.1 -16.5 191 -84.1 162.9C-151.7 134.9 -222.1 100.8 -243.6 44.7C-265.1 -11.4 -237.7 -89.6 -189 -149.4C-140.2 -209.1 -70.1 -250.6 -7.2 -244.9C55.8 -239.1 111.5 -186.3 157.2 -127.2"
+                  fill="#F5730A"></path>
+        </g>
+    </svg>
+
+    <script>
+        const tween1 = KUTE.fromTo(
+            '#orangeblob1',
+            {path: '#orangeblob1'},
+            {path: '#orangeblob2'},
+            {repeat: 999, duration: 3000, yoyo: true}
+        )
+        tween1.start()
+    </script>
+</section>
+
+<div class="spacer layer1"></div>
+
+<section class="safety_orange">
+    <h1>Another Header</h1>
+    <p>Adipisci, commodi dignissimos doloribus exercitationem facere fugit hic illum, laboriosam laudantium numquam
+        repellat saepe voluptates voluptatum! Earum ex quod voluptates? Animi autem dignissimos eos error magni natus
+        nemo
+        quam sapiente.</p>
+
+    <svg class="blob-motion"
+         id="visual"
+         viewBox="0 0 900 600"
+         width="900"
+         height="600"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="1.1">
+        <g transform="translate(420.00701521064457 310.9846325334766)">
+            <path id="redblob1"
+                  d="M193.6 -144.8C242.4 -93.3 267.4 -13.3 249.1 52.7C230.7 118.7 168.9 170.6 105.9 189.2C42.8 207.8 -21.5 193.1 -69.9 163C-118.2 132.8 -150.5 87.3 -172.8 28.3C-195.1 -30.6 -207.4 -102.9 -176.9 -150.2C-146.5 -197.5 -73.2 -219.7 -0.4 -219.4C72.4 -219.1 144.9 -196.2 193.6 -144.8"
+                  fill="#931C1C"></path>
+        </g>
+        <g transform="translate(429.66793876387584 276.8589668010585)" style="visibility: hidden">
+            <path id="redblob2"
+                  d="M172.4 -129.1C214.5 -84.7 233.5 -13.5 217 45.9C200.6 105.4 148.7 153.2 84.9 188.6C21.1 224 -54.5 247.2 -104.6 221.4C-154.7 195.7 -179.2 121.1 -182 56.6C-184.7 -8 -165.7 -62.4 -131.7 -105C-97.7 -147.6 -48.9 -178.3 8.1 -184.8C65.2 -191.3 130.3 -173.6 172.4 -129.1"
+                  fill="#931C1C"></path>
+        </g>
+    </svg>
+
+    <script>
+        const tween2 = KUTE.fromTo(
+            '#redblob1',
+            {path: '#redblob1'},
+            {path: '#redblob2'},
+            {repeat: 999, duration: 3000, yoyo: true}
+        )
+        tween2.start()
+    </script>
+</section>
+
+<div class="spacer layer2"></div>
+
 </body>
 </html>
